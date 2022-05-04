@@ -4,12 +4,6 @@
 # For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
 # Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
-# Class to create trie nodes
-# Every node in a trie contains two variables, one to hold all children another to indicate whether its 
-# the end of word or not
-
-
-
 # Answer:
 # We can use a "Trie" data structure to efficiently store and query the data
 
