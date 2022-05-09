@@ -36,7 +36,7 @@ class Log:
         if i <= self.index:
             return self.recordLog[self.index - i]
 
-        return self.recordLog[(self.index - i + this.n) % this.n]
+        return self.recordLog[(self.index - i + self.n) % self.n]
 
 log = Log(5)
 log.record(14)
