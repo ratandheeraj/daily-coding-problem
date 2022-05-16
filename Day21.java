@@ -20,9 +20,8 @@
 
 // for every iteration, we will find the maxCount which is the max of maxCount and count
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Day21{
 	
