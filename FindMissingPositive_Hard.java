@@ -19,38 +19,36 @@
 
 // Answer:
 
-// We need to find the missing positive integer in the array, so the integer will not be a negative number, 
+// We need to find the smallest missing positive integer in the array, so the integer will not be a negative number, 
 // or a number which is greater than array.length+1.
 
-// so we will use, cyclic sort to the numbers in the array
+// so we will use, cyclic sort to sort the numbers in the array which are positive and less than nums.length
+// it will place the numbers in their respective places
 
 // Then we will loop through the array, and find the first number which is not in its place, return it as answer
 
-// If no element is found, then all elements are in place, so return nums.length+1
+// If no element is found, then all elements are in place, so the number must be nums.length+1
 
 
 
 public class FindMissingPositive_Hard {
     public static int firstMissingPositive(int[] nums) {
-        int i = 0;
-        while (i < nums.length) {
+        int n = nums.length;
+        for(int i= 0;i<n;i++) {
             int correct = nums[i]-1;
-            if (nums[i]>0 &&  nums[i]<=nums.length && nums[i] != nums[correct]){
+            if (nums[i]>0 &&  nums[i]<=n && nums[i] != nums[correct]){
                 int temp = nums[correct];
                 nums[correct] = nums[i];
                 nums[i] = temp;
             }
-            else
-                i++;
         }
 
-
-        for(int j =0;j<nums.length;j++){
+        for(int j =0;j<n;j++){
             if (nums[j]!=j+1)
                 return j+1;
         }
 
-        return nums.length+1;
+        return n+1;
     }
 
     public static void main(String[] args){
